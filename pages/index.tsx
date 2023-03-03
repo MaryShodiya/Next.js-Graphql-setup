@@ -1,6 +1,10 @@
+
+// FETCH DATA WITH USEQUERY
+
 import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 
+//Fetch data from country api in CountriesQuery.graphql file
 import QUERY_COUNTRIES from './CountriesQuery.graphql';
 
 import styles from '../styles/Home.module.css';
@@ -12,7 +16,6 @@ export default function Home() {
   if (loading) {
     return <p>loading...</p>;
   }
-
   // check for errors
   if (error) {
     return <p>:( an error happened</p>;
